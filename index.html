@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MA Academy — Learn Front‑End Development</title>
+  <meta name="description" content="MA Academy: interactive courses for HTML, CSS, JavaScript and modern frameworks. Clean, modern, responsive front-end website demo." />
+  <meta name="keywords" content="front-end,html,css,javascript,react,courses,academy" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MA</div>
+        <div>
+          <div style="font-weight:700">MA Academy</div>
+          <div style="font-size:12px;color:var(--muted)">Learn. Build. Ship.</div>
+        </div>
+      </div>
+    <nav></nav>
+    <nav>
+      <ul>
+        <li><a href="#home" style="padding: 6px 12px; border-radius: 8px; transition: background-color 0.2s">Home</a></li>
+        <li><a href="#courses" style="padding: 6px 12px; border-radius: 8px; transition: background-color 0.2s">Courses</a></li>
+        <li><a href="#about" style="padding: 6px 12px; border-radius: 8px; transition: background-color 0.2s">About</a></li>
+        <li><a href="#contact" style="padding: 6px 12px; border-radius: 8px; transition: background-color 0.2s">Contact</a></li>
+      </ul>
+    </nav>
+
+      <div class="row">
+        <button class="btn" id="startBtn">Start Learning</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div>
+        <h1>Learn Front‑End Development Easily</h1>
+        <p>Hands-on courses in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and modern frameworks. Build real projects and get ready for front-end roles.</p>
+        <div class="features">
+          <div class="feature">Project-based</div>
+          <div class="feature">Beginner → Advanced</div>
+          <div class="feature">Live demos</div>
+          <div class="feature">Certificate of completion</div>
+        </div>
+        <div style="height:18px"></div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <button class="btn" id="viewCourses">View Courses</button>
+          <button class="btn secondary" id="howItWorks">How it works</button>
+        </div>
+        <div class="gap"></div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="chip">Beginner Friendly</div>
+          <div class="chip">Self‑Paced</div>
+        </div>
+      </div>
+
+      <aside class="card fade">
+        <h3 style="margin:0 0 8px">Featured Course</h3>
+        <div style="font-weight:600">Modern JavaScript: From Zero to Hero</div>
+        <p class="muted" style="margin:8px 0">12 weeks · 48 lessons · Project portfolio</p>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn" onclick="openCourse('js-modern')">Enroll Now</button>
+          <button class="btn secondary" onclick="openCourse('js-modern', true)">Preview</button>
+        </div>
+      </aside>
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses-section">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin:18px 0">
+        <h2 id="courses">Courses</h2>
+        <div style="display:flex;gap:8px;align-items:center">
+          <div class="searchbar" style="width:320px">
+            <input type="search" id="searchInput" placeholder="Search courses, e.g. JavaScript" aria-label="Search courses" />
+            <button class="btn secondary" id="clearSearch">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="courses-grid" id="coursesGrid">
+        <!-- JS will populate courses here -->
+      </div>
+
+      <div style="margin-top:18px;display:flex;justify-content:center">
+        <button class="btn secondary" id="loadMore">Load more</button>
+      </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <!-- Testimonials -->
+    <section>
+      <h2>What students say</h2>
+      <div class="testimonials">
+        <div class="tcard hover-lift">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="font-weight:600">Ali M.</div>
+            <div style="color:#fbbf24">★★★★★</div>
+          </div>
+          <div class="muted" style="font-size:13px">Front-end Developer</div>
+          <p style="margin-top:12px">The courses are well structured and the projects helped me build a strong portfolio. Highly recommended.</p>
+        </div>
+        <div class="tcard hover-lift">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="font-weight:600">Sara R.</div>
+            <div style="color:#fbbf24">★★★★★</div>
+          </div>
+          <div class="muted" style="font-size:13px">UI Designer</div>
+          <p style="margin-top:12px">Loved the practical approach. The JS course cleared all my doubts with interactive demos.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Us</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start">
+        <div>
+          <p>Front‑End Academy is dedicated to teaching practical front‑end skills. Our mission is to make web development accessible — from beginners to those leveling up to professional roles.</p>
+          <h4>Why choose us?</h4>
+          <ul>
+            <li>Project-based learning</li>
+            <li>Industry-aligned syllabus</li>
+            <li>Mentor support and community</li>
+          </ul>
+        </div>
+        <aside class="card">
+          <h4>Our Team</h4>
+          <div style="display:flex;gap:12px;flex-direction:column">
+            <div style="display:flex;gap:12px;align-items:center"></div>
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rashid Hussain" style="width:60px;height:60px;border-radius:30px">
+              <div>
+                <strong>Rashid Hussain</strong>
+                <div class="muted">Lead Front‑End Instructor</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center"></div>
+            <div style="display:flex;gap:12px;flex-direction:column"></div>
+              <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Mubarak Ali" style="width:60px;height:60px;border-radius:30px">
+              <div>
+                <strong>Mubarak Ali</strong>
+                <div class="muted">Curriculum Designer</div>
+              </div>
+            </div>
+          </div>
+          
+        </aside>
+      </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+        <div>
+          <p class="muted">Have a question? Fill out the form and we'll get back to you within 48 hours.</p>
+          <form id="contactForm" onsubmit="return submitContact(event)">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <input type="text" id="cname" placeholder="Your name" required />
+              <input type="email" id="cemail" placeholder="Your email" required />
+            </div>
+            <div style="height:12px"></div>
+            <textarea id="cmessage" rows="5" placeholder="Your message" required></textarea>
+            <div style="height:12px"></div>
+            <button class="btn">Send Message</button>
+          </form>
+          <div id="contactStatus" class="muted" style="margin-top:10px"></div>
+        </div>
+
+        <aside>
+          <div style="background:#fff;padding:12px;border-radius:12px;box-shadow:0 8px 30px rgba(12,25,48,0.04)">
+            <h4>Contact Info</h4>
+            <div class="muted">Email: <a href="mailto:hello@frontendacademy.example">armanali12112@gmail.com</a></div>
+            <div class="muted">Phone: +92 340 8019976</div>
+            <div style="height:12px"></div>
+            <div style="border-radius:8px;overflow:hidden">
+              <!-- Embedded Google Map placeholder -->
+              <iframe src="https://maps.google.com/maps?q=Karachi&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width:100%;height:200px;border:0" loading="lazy"></iframe>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <!-- Course detail placeholder area (rendered by JS) -->
+    <section id="courseDetailArea" style="display:none">
+      <!-- Filled by JS -->
+    </section>
+
+    <div style="height:40px"></div>
+  </main>
+
+<footer>
+    <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-bottom:32px">
+            <div>
+                <div class="brand" style="margin-bottom:12px">
+                    <div class="logo">MA</div>
+                    <div style="font-weight:700">MA Academy</div>
+                </div>
+                <p class="muted" style="font-size:14px">Building the next generation of front-end developers through practical, project-based learning.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul style="list-style:none;padding:0;margin:0">
+                    <li><a href="#courses" class="muted">Courses</a></li>
+                    <li style="margin:8px 0"><a href="#about" class="muted">About Us</a></li>
+                    <li><a href="#contact" class="muted">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div style="display:flex;gap:12px;margin-top:12px">
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="btn secondary" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn secondary" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="btn secondary" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="border-top:1px solid rgba(11,20,34,0.05);padding-top:24px">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+                <div class="muted">© <span id="year"></span> MA Academy — All rights reserved.</div>
+                <div class="muted">
+                    <a href="#" class="muted" style="margin-right:12px">Privacy Policy</a>
+                    <a href="#" class="muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Modal (Enroll / Preview) -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true" id="modalContent">
+      <div id="modalInner"></div>
+      <div style="height:12px"></div>
+      <div style="display:flex;justify-content:flex-end;gap:8px">
+        <button class="btn secondary" onclick="closeModal()">Close</button>
+        <button class="btn" id="modalPrimary">Proceed</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Basic data store for courses (front-end only)
+    const courses = [
+      {id:'html-basic',title:'HTML Essentials',desc:'Structure web pages using semantic HTML. Build static sites.',duration:'2 weeks',level:'Beginner',instructor:'Rashid Hussain',syllabus:['HTML basics','Semantic elements','Forms & accessibility','Small project']},
+      {id:'css-pro',title:'CSS for Developers',desc:'Layout, Flexbox, Grid, responsive design and animations.',duration:'3 weeks',level:'Beginner → Intermediate',instructor:'Mubarak Ali',syllabus:['Selectors & Specificity','Flexbox','Grid','Responsive design','Animations & transitions']},
+      {id:'js-modern',title:'Modern JavaScript',desc:'ES6+, asynchronous JS, DOM manipulation and real projects.',duration:'8 weeks',level:'Intermediate',instructor:'Zulqarnain Abbas',syllabus:['ES6 syntax','Functions & Scope','DOM & events','Fetch & async/await','Build a JS app']},
+      {id:'react-intro',title:'React (Basics)',desc:'Components, state, props and hooks to build single-page apps.',duration:'6 weeks',level:'Intermediate',instructor:'Zulqarnain Abbas',syllabus:['JSX','Components','State & Props','Hooks','Project: To‑Do App']},
+      {id:'css-advanced',title:'Advanced CSS & UI',desc:'Design systems, component styling, performance and accessibility.',duration:'4 weeks',level:'Advanced',instructor:'Rashid Hussain',syllabus:['Design tokens','Component patterns','Performance','Accessibility']}
+    ];
+
+    // DOM refs
+    const coursesGrid = document.getElementById('coursesGrid');
+    const searchInput = document.getElementById('searchInput');
+    const clearSearch = document.getElementById('clearSearch');
+    const viewCoursesBtn = document.getElementById('viewCourses');
+    const startBtn = document.getElementById('startBtn');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalInner = document.getElementById('modalInner');
+    const modalPrimary = document.getElementById('modalPrimary');
+    const contactStatus = document.getElementById('contactStatus');
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function renderCourses(list){
+      coursesGrid.innerHTML = '';
+      list.forEach(c=>{
+        const el = document.createElement('article');
+        el.className = 'course hover-lift fade';
+        el.innerHTML = `
+          <h3>${c.title}</h3>
+          <div class="meta">${c.duration} · ${c.level}</div>
+          <p class="muted">${c.desc}</p>
+          <div style="height:12px"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-size:13px;color:var(--muted)">Instructor: ${c.instructor}</div>
+            <div class="course-actions">
+              <button class="btn secondary" onclick="openCourse('${c.id}',true)">Preview</button>
+              <button class="btn" onclick="openCourse('${c.id}')">Enroll Now</button>
+            </div>
+          </div>
+        `;
+        coursesGrid.appendChild(el);
+      })
+    }
+
+    // initial render
+    renderCourses(courses.slice(0,6));
+
+    // search/filter
+    searchInput.addEventListener('input',()=>{
+      const q = searchInput.value.toLowerCase().trim();
+      const filtered = courses.filter(c=> (c.title + ' ' + c.desc + ' ' + c.instructor).toLowerCase().includes(q));
+      renderCourses(filtered);
+    });
+    clearSearch.addEventListener('click',()=>{searchInput.value='';renderCourses(courses);});
+
+    // load more button (simple demo)
+    document.getElementById('loadMore').addEventListener('click',()=>{
+      alert('Load more demo — in a real site you would fetch more courses from a server.');
+    });
+
+    // navigation buttons
+    viewCoursesBtn.addEventListener('click',()=>{location.hash='courses'});
+    startBtn.addEventListener('click',()=>{location.hash='courses';window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Modal handling
+    function openCourse(id,preview=false){
+      const course = courses.find(c=>c.id===id);
+      if(!course) return alert('Course not found');
+      modalInner.innerHTML = `
+        <h3 style="margin:0 0 6px">${course.title}</h3>
+        <div class="muted">${course.duration} · ${course.level} · Instructor: ${course.instructor}</div>
+        <p style="margin-top:10px" class="muted">${course.desc}</p>
+        <div class="syllabus">
+          <strong>Syllabus</strong>
+          <ul>
+            ${course.syllabus.map(s=>`<li>${s}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+      modalPrimary.textContent = preview ? 'Preview Lesson' : 'Enroll via Email';
+      modalPrimary.onclick = () => {
+        if(preview){
+          // open a demo lesson (for demo, open a modal alert or new window with a simple sample)
+          window.open('https://www.youtube.com/results?search_query=' + encodeURIComponent(course.title + ' tutorial'), '_blank');
+        } else {
+          // open mailto to send enrollment request to admin
+          const subject = encodeURIComponent(`Enroll: ${course.title}`);
+          const body = encodeURIComponent(`Hello,\n\nI would like to enroll in "${course.title}".\nName:\nEmail:\nMessage:\n\nThanks.`);
+          window.location.href = `mailto:hello@frontendacademy.example?subject=${subject}&body=${body}`;
+        }
+      }
+      modalBackdrop.style.display = 'flex';
+    }
+    function closeModal(){modalBackdrop.style.display='none';}
+    modalBackdrop.addEventListener('click',(e)=>{if(e.target===modalBackdrop) closeModal();});
+
+    // Contact form -- frontend only. For real email handling, wire to server or form service (e.g., Formspree, Netlify Forms, Firebase)
+    function submitContact(e){
+      e.preventDefault();
+      const name = document.getElementById('cname').value.trim();
+      const email = document.getElementById('cemail').value.trim();
+      const message = document.getElementById('cmessage').value.trim();
+      if(!name||!email||!message) return;
+      // Try to open mail client as fallback
+      const subject = encodeURIComponent('Contact from website');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      // This will open the user's email client. For automatic email sending use an API on server side.
+      window.location.href = `mailto:hello@frontendacademy.example?subject=${subject}&body=${body}`;
+      contactStatus.textContent = 'Opening your email client to send the message...';
+      setTimeout(()=>{contactStatus.textContent='If your email client did not open, please message hello@frontendacademy.example directly.'},2500);
+      return false;
+    }
+
+    // Hash-based simple routing for course detail view
+    function renderCourseDetailFromHash(){
+      const hash = location.hash.replace('#','');
+      if(!hash.startsWith('course-')){ document.getElementById('courseDetailArea').style.display='none'; return; }
+      const id = hash.replace('course-','');
+      const course = courses.find(c=>c.id===id);
+      if(!course) return;
+      const area = document.getElementById('courseDetailArea');
+      area.style.display='block';
+      area.innerHTML = `
+        <div class="course-details">
+          <a href="#courses" style="font-size:13px;color:var(--muted)">&larr; Back to courses</a>
+          <h2 style="margin-top:6px">${course.title}</h2>
+          <div class="muted">${course.duration} · ${course.level} · Instructor: ${course.instructor}</div>
+          <p style="margin-top:12px" class="muted">${course.desc}</p>
+          <div style="height:12px"></div>
+          <h4>Syllabus</h4>
+          <ul>
+            ${course.syllabus.map(s=>`<li>${s}</li>`).join('')}
+          </ul>
+          <div style="height:12px"></div>
+          <h4>Lesson preview</h4>
+          <div style="background:#f8fafc;padding:12px;border-radius:10px">Embedded lesson demo (for demo, opens a YouTube search)</div>
+          <div style="height:12px"></div>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn secondary" onclick="openCourse('${course.id}', true)">Preview Lesson</button>
+            <button class="btn" onclick="openCourse('${course.id}')">Enroll Now</button>
+          </div>
+        </div>
+      `;
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+    window.addEventListener('hashchange',renderCourseDetailFromHash);
+
+    // wire logo click to home
+    document.querySelector('.logo').addEventListener('click',()=>{location.hash='home';window.scrollTo({top:0,behavior:'smooth'})});
+
+    // simple keyboard accessibility: Esc closes modal
+    window.addEventListener('keydown',(e)=>{if(e.key==='Escape') closeModal();});
+
+    // On page load, check if deep link to course
+    document.addEventListener('DOMContentLoaded',()=>{renderCourseDetailFromHash()});
+  </script>
+</body>
+</html>
